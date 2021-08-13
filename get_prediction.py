@@ -316,10 +316,9 @@ def _write_output(voyages, predictions, voyages_outfile, predictions_outfile):
 
 
 def get_prediction_main(trips, voyages, ports, voyages_outfile, predictions_outfile, prediction='standard'):
-    import datetime
-    print(datetime.datetime.now(), 'getting_first_prediction...')
+
     first_prediction = first_prediction_all_vessels(trips, voyages)
-    print(datetime.datetime.now(), 'all the other stuff...')
+
     if prediction == 'standard':
         predictions = standard_prediction(voyages, first_prediction)
 
