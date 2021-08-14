@@ -406,7 +406,6 @@ def get_voyages_main(tracking_csv, ports_csv, ports_outfile, trips_outfile, voya
 
     voyages = process_voyages(voyages, ports)
 
-    return ports, trips, voyages
     ports.to_csv(ports_outfile)
     trips.to_csv(trips_outfile, index=False)
     voyages.to_csv(voyages_outfile, index=False)
